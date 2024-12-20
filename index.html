@@ -13,27 +13,30 @@
         }
 
         body {
-            background-color: #f4f4f9;
+            background-color: #f8f9fa;
             overflow-y: scroll;
+            color: #2c3e50;
         }
 
         header {
-            background-color: #34495e;
+            background-color: #1e3799;
             color: white;
-            padding: 15px 20px;
+            padding: 20px;
             text-align: center;
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         header h1 {
             font-size: 2.5rem;
             font-weight: bold;
+            margin-bottom: 5px;
         }
 
         header p {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             margin: 5px 0;
         }
 
@@ -42,29 +45,30 @@
             top: 0;
             left: 0;
             height: 100%;
-            width: 200px;
+            width: 220px;
             background-color: #2c3e50;
             color: white;
-            padding-top: 60px;
+            padding-top: 80px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
         }
 
         #sidebar nav a {
             display: block;
             color: white;
-            padding: 15px;
+            padding: 15px 20px;
             text-decoration: none;
             font-size: 1rem;
-            transition: background 0.3s;
+            transition: background 0.3s, color 0.3s;
         }
 
         #sidebar nav a:hover, #sidebar nav a.active {
             background-color: #1abc9c;
+            color: white;
         }
 
         main {
-            margin-left: 200px;
-            padding: 20px;
-            padding-top: 80px; /* Adjust for header height */
+            margin-left: 240px;
+            padding: 30px;
         }
 
         section {
@@ -76,9 +80,9 @@
         }
 
         h2 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-            color: #2c3e50;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #1e3799;
         }
 
         ul {
@@ -88,11 +92,21 @@
 
         ul li {
             margin: 10px 0;
+            line-height: 1.6;
         }
 
         /* Smooth scrolling */
         html {
             scroll-behavior: smooth;
+        }
+
+        a {
+            color: #1e3799;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
 
     </style>
@@ -101,7 +115,7 @@
     <header>
         <h1>Sahithya Kadiyamsetti</h1>
         <p>Proactive IT Graduate | Software Developer | ML Enthusiast | Cybersecurity Advocate</p>
-        <p>krishna - 521131, Andhra Pradesh, India | Contact: sahithyakadiyamsetti@gmail.com | +91-8309064817</p>
+        <p>Krishna - 521131, Andhra Pradesh, India | Contact: sahithyakadiyamsetti@gmail.com | +91-8309064817</p>
     </header>
 
     <div id="sidebar">
@@ -142,8 +156,7 @@
         <section id="projects">
             <h2>Projects</h2>
             <ul>
-                <li><strong>Descriptive Analysis and Feature Engineering for Restaurant Data:</strong></li>
-                    <li></li>Conducted a comprehensive analysis and applied feature engineering techniques to enhance model accuracy by 20%. The project streamlined workflows and reduced errors by 50%, showcasing proficiency in data-driven solutions.</li>
+                <li><strong>Descriptive Analysis and Feature Engineering for Restaurant Data:</strong> Conducted a comprehensive analysis and applied feature engineering techniques to enhance model accuracy by 20%. Streamlined workflows and reduced errors by 50%, showcasing proficiency in data-driven solutions.</li>
             </ul>
         </section>
 
