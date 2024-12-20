@@ -78,12 +78,21 @@
 
         section {
             display: none;
-            transition: opacity 0.5s ease-in-out;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
         }
 
         section.active {
             display: block;
-            opacity: 1;
+        }
+
+        section:nth-child(odd) {
+            background-color: #ecf0f1;
+        }
+
+        section:nth-child(even) {
+            background-color: #bdc3c7;
         }
 
         h2 {
@@ -249,3 +258,8 @@
 
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>
