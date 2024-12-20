@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sahithya Kadiyamsetti</title>
+    <title>SAHITHYA KADIYAMSETTI</title>
     <style>
         * {
             margin: 0;
@@ -13,145 +13,165 @@
         }
 
         body {
-            display: flex;
-            height: 100vh;
-            overflow: hidden;
+            scroll-behavior: smooth;
+            background-color: #f4f4f9;
         }
 
-        nav {
+        header {
             background-color: #2c3e50;
             color: white;
-            width: 20%;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 20px;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        header span {
+            display: block;
+            font-size: 1rem;
+            margin-top: 5px;
+            font-weight: 300;
+        }
+
+        #sidebar {
             position: fixed;
-        }
-
-        nav h1 {
-            font-size: 1.8rem;
-        }
-
-        nav p {
-            font-size: 0.9rem;
-            margin-bottom: 20px;
-        }
-
-        nav a {
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 200px;
+            background-color: #2c3e50;
             color: white;
+            padding-top: 50px;
+        }
+
+        #sidebar nav a {
+            display: block;
+            color: white;
+            padding: 15px;
             text-decoration: none;
             font-size: 1rem;
-            transition: color 0.3s;
+            transition: background 0.3s;
         }
 
-        nav a:hover {
-            color: #FFD700;
+        #sidebar nav a:hover, #sidebar nav a.active {
+            background-color: #1abc9c;
         }
 
         main {
-            margin-left: 20%;
+            margin-left: 200px;
             padding: 20px;
-            width: 80%;
-            overflow-y: auto;
         }
 
         section {
-            margin-bottom: 40px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #ccc;
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
         }
 
-        .section-title {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
+        section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
             color: #2c3e50;
         }
 
-        .content {
-            font-size: 1rem;
-            line-height: 1.6;
-            color: #333;
+        ul {
+            list-style: disc;
+            padding-left: 20px;
         }
 
-        footer {
-            text-align: center;
-            background-color: #2c3e50;
-            color: white;
-            padding: 10px;
+        ul li {
+            margin: 10px 0;
         }
-
     </style>
 </head>
 <body>
-    <nav>
-        <h1>Sahithya Kadiyamsetti</h1>
-        <p>Location: Krishna - 521131, Andhra Pradesh, India</p>
-        <p>Email: sahithyakadiyamsetti@gmail.com</p>
-        <a href="#welcome">Welcome</a>
-        <a href="#about">About Me</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#contact">Contact</a>
-    </nav>
+    <header>
+        <h1>SAHITHYA KADIYAMSETTI</h1>
+        <span>Proactive IT Graduate | Software Developer | Machine Learning Enthusiast</span>
+        <span>Krishna - 521131, Andhra Pradesh, India | sahithyakadiyamsetti@gmail.com | +91-8309064817</span>
+    </header>
+
+    <div id="sidebar">
+        <nav>
+            <a href="#home" onclick="showSection('home')" class="active">Home</a>
+            <a href="#about" onclick="showSection('about')">About Me</a>
+            <a href="#skills" onclick="showSection('skills')">Skills</a>
+            <a href="#projects" onclick="showSection('projects')">Projects</a>
+            <a href="#certifications" onclick="showSection('certifications')">Certifications</a>
+            <a href="#contact" onclick="showSection('contact')">Contact</a>
+        </nav>
+    </div>
 
     <main>
-        <section id="welcome">
-            <h2 class="section-title">Welcome</h2>
-            <div class="content">
-                <p>Welcome to my professional portfolio! Explore my expertise in software development, machine learning, and cybersecurity. Delve into my projects, skills, and certifications that reflect my commitment to technological innovation and problem-solving.</p>
-            </div>
+        <section id="home" class="active">
+            <h2>Welcome</h2>
+            <p>Welcome to Sahithya Kadiyamsetti's professional portfolio. Here, you can explore my skills, projects, and certifications that showcase my expertise in the IT field.</p>
         </section>
 
         <section id="about">
-            <h2 class="section-title">About Me</h2>
-            <div class="content">
-                <p>Hi, I am Sahithya, a proactive IT graduate with a passion for leveraging technology to deliver innovative solutions. With expertise in software development, machine learning, and cybersecurity, I aim to contribute to dynamic organizations and drive meaningful impact.</p>
-            </div>
+            <h2>About Me</h2>
+            <ul>
+                <li>I am a proactive IT graduate passionate about leveraging cutting-edge technology to deliver innovative solutions.</li>
+                <li>My expertise lies in software development, machine learning, and cybersecurity.</li>
+                <li>I aim to contribute effectively to dynamic organizations.</li>
+            </ul>
         </section>
 
         <section id="skills">
-            <h2 class="section-title">Skills</h2>
-            <div class="content">
-                <ul>
-                    <li>Programming Languages: C, Python, Java, HTML, CSS, JavaScript</li>
-                    <li>Tools & Frameworks: MySQL, TensorFlow, Scikit-learn, Apex, Visualforce, Lightning Web Components</li>
-                    <li>Core Competencies: Data Analysis, Machine Learning, Cybersecurity, Android Development</li>
-                </ul>
-            </div>
+            <h2>Skills</h2>
+            <ul>
+                <li><strong>Programming Languages:</strong> C, Python, Java, HTML, CSS, JavaScript</li>
+                <li><strong>Tools & Frameworks:</strong> MySQL, TensorFlow, Scikit-learn, Apex, Visualforce, Lightning Web Components</li>
+                <li><strong>Core Competencies:</strong> Data Analysis, Machine Learning, Cybersecurity, Android Development</li>
+            </ul>
         </section>
 
         <section id="projects">
-            <h2 class="section-title">Projects</h2>
-            <div class="content">
-                <ul>
-                    <li><strong>Descriptive Analysis and Feature Engineering for Restaurant Data:</strong> Improved model accuracy by 20%, streamlined workflows, and reduced errors by 50%.</li>
-                </ul>
-            </div>
+            <h2>Projects</h2>
+            <ul>
+                <li><strong>Descriptive Analysis and Feature Engineering for Restaurant Data:</strong> Improved model accuracy by 20%, streamlined workflows, and reduced errors by 50%.</li>
+            </ul>
         </section>
 
         <section id="certifications">
-            <h2 class="section-title">Certifications</h2>
-            <div class="content">
-                <ul>
-                    <li>Developing Soft Skills and Personality - NPTEL</li>
-                    <li>Machine Learning with Python - edX</li>
-                    <li>Introduction to Industry 4.0 & Industrial Internet of Things - NPTEL</li>
-                </ul>
-            </div>
+            <h2>Certifications</h2>
+            <ul>
+                <li>Developing Soft Skills and Personality - NPTEL</li>
+                <li>Machine Learning with Python - edX</li>
+                <li>Introduction to Industry 4.0 & Industrial Internet of Things - NPTEL</li>
+            </ul>
         </section>
 
         <section id="contact">
-            <h2 class="section-title">Contact</h2>
-            <div class="content">
-                <p>Email: sahithyakadiyamsetti@gmail.com</p>
-                <p>Phone: +91-8309064817</p>
-                <p><a href="https://www.linkedin.com/in/sahithya-kadiyamsetti-a827301b6" target="_blank">LinkedIn Profile</a></p>
-                <p><a href="https://github.com/kadiyamsettisahithya" target="_blank">GitHub Profile</a></p>
-            </div>
+            <h2>Contact</h2>
+            <ul>
+                <li><strong>Email:</strong> sahithyakadiyamsetti@gmail.com</li>
+                <li><strong>Phone:</strong> +91-8309064817</li>
+                <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sahithya-kadiyamsetti-a827301b6" target="_blank">LinkedIn Profile</a></li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/kadiyamsettisahithya" target="_blank">GitHub Profile</a></li>
+            </ul>
         </section>
     </main>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.querySelector(`#${sectionId}`).classList.add('active');
+
+            document.querySelectorAll('#sidebar nav a').forEach(link => {
+                link.classList.remove('active');
+            });
+            document.querySelector(`#sidebar nav a[href="#${sectionId}"]`).classList.add('active');
+        }
+    </script>
 </body>
 </html>
