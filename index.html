@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sravanthi's Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            scroll-behavior: smooth;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+        header nav a:hover {
+            color: #FFD700;
+        }
+        section {
+            padding: 100px 20px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: background-color 0.5s ease;
+        }
+        #home {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+        }
+        #about {
+            background: linear-gradient(135deg, #34e89e, #0f3443);
+        }
+        #resume {
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+        }
+        #skills {
+            background: linear-gradient(135deg, #f7971e, #ffd200);
+        }
+        #projects {
+            background: linear-gradient(135deg, #8e44ad, #3498db);
+        }
+        #certifications {
+            background: linear-gradient(135deg, #2b5876, #4e4376);
+        }
+        #contact {
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+        }
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .content {
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.6;
+            text-align: center;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 10px 0;
+        }
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#resume">Resume</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Welcome to Sravanthi's Portfolio</h1>
+        <p>D-No: 1-36A, Parisavaripalem, Nagaram (md), Bapatla (dt), Andhra Pradesh - 522329</p>
+        <p>Email: sravanthisammeta04@gmail.com | Phone: 9391747180</p>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="content">
+            <p>Hi, I am Sravanthi, a passionate software developer with expertise in MERN and Java Full Stack development. I enjoy creating applications that are both functional and visually appealing.</p>
+        </div>
+    </section>
+
+    <section id="resume">
+        <h2 class="section-title">Resume</h2>
+        <div class="content">
+            <p><strong>Objective:</strong> To associate myself with an esteemed organization where I can utilize my skills towards the growth of the organization while achieving personal development.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">Skills</h2>
+        <div class="content">
+            <ul>
+                <li>C, C++, Python, Java</li>
+                <li>HTML, JavaScript</li>
+                <li>Languages: English, Telugu</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="content">
+            <ul>
+                <li><strong>React News Aggregator App:</strong> A centralized platform for staying informed.</li>
+                <li><strong>Hospital Management System:</strong> Efficient management of doctor and patient records.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="certifications">
+        <h2 class="section-title">Certifications</h2>
+        <div class="content">
+            <ul>
+                <li>Technical Workshop on AI with Machine Learning (IIT Hyderabad)</li>
+                <li>Python (Basic) - HackerRank</li>
+                <li>Java Programming - NPTEL Certification</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Contact</h2>
+        <div class="content">
+            <p>Email: sravanthisammeta04@gmail.com</p>
+            <p>Phone: 9391747180</p>
+            <p><a href="https://www.linkedin.com/in/sravanthi-sammeta-a14745279" target="_blank">LinkedIn Profile</a></p>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2024 Sravanthi. All rights reserved.
+    </footer>
+</body>
+</html>
