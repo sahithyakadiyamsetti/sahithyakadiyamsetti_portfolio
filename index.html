@@ -16,24 +16,40 @@
             background-color: #f4f4f9;
         }
 
-        /* Top Bar */
-        #topbar {
+        header {
             background-color: #2c3e50;
             color: white;
-            padding: 15px;
+            padding: 20px 15px;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header .tagline {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-bottom: 15px;
+        }
+
+        header .roles {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 1rem;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 15px;
         }
 
-        #topbar .name {
-            font-size: 1.8rem;
-            font-weight: bold;
-        }
-
-        #topbar .contact-info {
+        header .roles span {
+            background-color: #1abc9c;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
             font-size: 1rem;
+            text-transform: capitalize;
         }
 
         #sidebar {
@@ -41,20 +57,18 @@
             top: 0;
             left: 0;
             height: 100%;
-            width: 220px;
-            background-color: #34495e;
+            width: 200px;
+            background-color: #2c3e50;
             color: white;
-            padding-top: 30px;
-            transition: width 0.3s;
+            padding-top: 50px;
         }
 
         #sidebar nav a {
-            display: flex;
-            align-items: center;
+            display: block;
             color: white;
             padding: 15px;
             text-decoration: none;
-            font-size: 1.1rem;
+            font-size: 1rem;
             transition: background 0.3s;
         }
 
@@ -62,14 +76,10 @@
             background-color: #1abc9c;
         }
 
-        #sidebar nav a i {
-            margin-right: 10px;
-        }
-
         main {
-            margin-left: 220px;
+            margin-left: 200px;
             padding: 20px;
-            padding-top: 20px; /* Adjusted for header removal */
+            padding-top: 70px; /* Adjust for header height */
         }
 
         section {
@@ -97,24 +107,27 @@
     </style>
 </head>
 <body>
+    <header>
+        <h1>SAHITHYA KADIYAMSETTI</h1>
+        <p class="tagline">Proactive IT Graduate | Software Developer | Machine Learning Enthusiast</p>
+        <p class="tagline">Based in Krishna, Andhra Pradesh, India | Contact: sahithyakadiyamsetti@gmail.com | +91-8309064817</p>
 
-    <!-- Top Bar with Name and Contact Details -->
-    <div id="topbar">
-        <div class="name">Sahithya Kadiyamsetti</div>
-        <div class="contact-info">
-            <span>Email: sahithyakadiyamsetti@gmail.com</span> | 
-            <span>Phone: +91-8309064817</span>
+        <div class="roles">
+            <span>Software Developer</span>
+            <span>Machine Learning Enthusiast</span>
+            <span>Cybersecurity Advocate</span>
+            <span>Data Analyst</span>
         </div>
-    </div>
+    </header>
 
     <div id="sidebar">
         <nav>
-            <a href="#home" onclick="showSection('home')" class="active"><i class="fa fa-home"></i> Home</a>
-            <a href="#about" onclick="showSection('about')"><i class="fa fa-user"></i> About Me</a>
-            <a href="#skills" onclick="showSection('skills')"><i class="fa fa-cogs"></i> Skills</a>
-            <a href="#projects" onclick="showSection('projects')"><i class="fa fa-briefcase"></i> Projects</a>
-            <a href="#certifications" onclick="showSection('certifications')"><i class="fa fa-certificate"></i> Certifications</a>
-            <a href="#contact" onclick="showSection('contact')"><i class="fa fa-envelope"></i> Contact</a>
+            <a href="#home" onclick="showSection('home')" class="active">Home</a>
+            <a href="#about" onclick="showSection('about')">About Me</a>
+            <a href="#skills" onclick="showSection('skills')">Skills</a>
+            <a href="#projects" onclick="showSection('projects')">Projects</a>
+            <a href="#certifications" onclick="showSection('certifications')">Certifications</a>
+            <a href="#contact" onclick="showSection('contact')">Contact</a>
         </nav>
     </div>
 
@@ -185,8 +198,5 @@
             document.querySelector(`#sidebar nav a[href="#${sectionId}"]`).classList.add('active');
         }
     </script>
-
-    <!-- Font Awesome Icons -->
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
 </html>
