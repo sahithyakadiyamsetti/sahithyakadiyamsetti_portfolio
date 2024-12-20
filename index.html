@@ -13,7 +13,6 @@
         }
 
         body {
-            scroll-behavior: smooth;
             background-color: #f4f4f9;
         }
 
@@ -59,20 +58,15 @@
         main {
             margin-left: 200px;
             padding: 20px;
+            padding-top: 70px; /* Adjust for header height */
         }
 
         section {
             display: none;
-            animation: fadeIn 0.5s ease-in-out;
         }
 
         section.active {
             display: block;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
         }
 
         h2 {
@@ -162,11 +156,14 @@
 
     <script>
         function showSection(sectionId) {
+            // Hide all sections
             document.querySelectorAll('section').forEach(section => {
                 section.classList.remove('active');
             });
+            // Show the clicked section
             document.querySelector(`#${sectionId}`).classList.add('active');
 
+            // Update the active link in sidebar
             document.querySelectorAll('#sidebar nav a').forEach(link => {
                 link.classList.remove('active');
             });
