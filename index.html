@@ -1,104 +1,216 @@
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahithya Kadiyamsetti</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-    body {
-        background-color: #ecf0f1; /* Light grayish background for a professional look */
-        overflow-y: scroll;
-    }
+        body {
+            background-color: #f4f4f9;
+            overflow-y: scroll;
+        }
 
-    header {
-        background-color: #2c3e50; /* Darker shade for the header */
-        color: white;
-        padding: 15px 20px;
-        text-align: center;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-    }
+        header {
+            background-color: #34495e;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-    header h1 {
-        font-size: 2.5rem;
-        font-weight: bold;
-    }
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
 
-    header p {
-        font-size: 1.1rem;
-        margin: 5px 0;
-    }
+        header p {
+            font-size: 1.1rem;
+            margin: 5px 0;
+        }
 
-    #sidebar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 200px;
-        background-color: #34495e; /* A professional dark grayish blue */
-        color: white;
-        overflow-y: auto; /* Added for scrollability */
-        padding-top: 60px;
-    }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 200px;
+            background-color: #2c3e50;
+            color: white;
+            overflow-y: auto; /* Added for scrollability */
+            padding-top: 60px;
+        }
 
-    #sidebar nav a {
-        display: block;
-        color: white;
-        padding: 15px;
-        text-decoration: none;
-        font-size: 1rem;
-        transition: background 0.3s, color 0.3s;
-    }
+        #sidebar nav a {
+            display: block;
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background 0.3s, color 0.3s;
+        }
 
-    #sidebar nav a:hover, #sidebar nav a.active {
-        background-color: #1abc9c; /* Fresh green for hover/active */
-        color: white;
-    }
+        #sidebar nav a:hover, #sidebar nav a.active {
+            background-color: #1abc9c;
+            color: white;
+        }
 
-    main {
-        margin-left: 200px;
-        padding: 20px;
-        padding-top: 80px; /* Adjust for header height */
-        background-color: #ffffff; /* White background for the main content */
-        color: #2c3e50; /* Dark text for readability */
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    }
+        main {
+            margin-left: 200px;
+            padding: 20px;
+            padding-top: 80px; /* Adjust for header height */
+        }
 
-    section {
-        display: none;
-    }
+        section {
+            display: none;
+        }
 
-    section.active {
-        display: block;
-    }
+        section.active {
+            display: block;
+        }
 
-    h2 {
-        font-size: 1.8rem;
-        margin-bottom: 15px;
-        color: #2c3e50;
-    }
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
 
-    ul {
-        list-style: disc;
-        padding-left: 20px;
-    }
+        ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
 
-    ul li {
-        margin: 10px 0;
-    }
+        ul li {
+            margin: 10px 0;
+        }
 
-    /* Smooth scrolling */
-    html {
-        scroll-behavior: smooth;
-    }
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sahithya Kadiyamsetti</h1>
+        <p>Proactive IT Graduate | Software Developer | ML Enthusiast | Cybersecurity Advocate</p>
+        <p>Krishna - 521131, Andhra Pradesh, India | Contact: sahithyakadiyamsetti@gmail.com | +91-8309064817</p>
+    </header>
 
-    /* Optional: style the footer (if applicable) */
-    footer {
-        background-color: #2c3e50;
-        color: white;
-        text-align: center;
-        padding: 10px;
-    }
-</style>
+    <div id="sidebar">
+        <nav>
+            <a href="#home" onclick="showSection('home')" class="active">Home</a>
+            <a href="#about" onclick="showSection('about')">About Me</a>
+            <a href="#skills" onclick="showSection('skills')">Skills</a>
+            <a href="#projects" onclick="showSection('projects')">Projects</a>
+            <a href="#certifications" onclick="showSection('certifications')">Certifications</a>
+            <a href="#contact" onclick="showSection('contact')">Contact</a>
+        </nav>
+    </div>
+
+    <main>
+        <section id="home" class="active">
+            <h2>Welcome</h2>
+            <p>Welcome to Sahithya Kadiyamsetti's professional portfolio. Explore my skills, projects, and certifications showcasing my expertise in the IT field.</p>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <ul>
+                <li>A proactive IT graduate passionate about delivering innovative solutions.</li>
+                <li>Expertise in software development, machine learning, and cybersecurity.</li>
+                <li>Aiming to contribute effectively to dynamic organizations.</li>
+            </ul>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li><strong>Programming Languages:</strong> C, Python, Java, HTML, CSS, JavaScript</li>
+                <li><strong>Tools & Frameworks:</strong> MySQL, TensorFlow, Scikit-learn, Apex, Visualforce, Lightning Web Components</li>
+                <li><strong>Core Competencies:</strong> Data Analysis, Machine Learning, Cybersecurity, Android Development</li>
+            </ul>
+        </section>
+
+        <section id="projects">
+    <h2>Projects</h2>
+    <ul>
+        <li><strong>Descriptive Analysis and Feature Engineering for Restaurant Data:</strong></li>
+        <li>Conducted a comprehensive analysis and applied feature engineering techniques to enhance model accuracy by 20%. Streamlined workflows and reduced errors by 50%.</li>
+        <li>
+            <ul>
+                <li><strong>Project Objective:</strong> Performed an in-depth descriptive analysis of restaurant data for actionable insights and improved predictive model accuracy through advanced feature engineering techniques.</li>
+                <li><strong>Key Contributions:</strong>
+                    <ul>
+                        <li>Cleaned raw datasets, handled missing values, removed duplicates, and normalized the data to ensure consistency and accuracy for analysis.</li>
+                        <li>Visualized key metrics such as customer preferences, restaurant performance, and geographic trends using libraries like Matplotlib and Seaborn. Identified patterns and anomalies in sales and customer reviews.</li>
+                        <li>Created additional features such as average customer ratings by cuisine type, time-based trends, geographic features, and sentiment scores extracted from customer reviews using NLP techniques.</li>
+                        <li>Applied correlation analysis and hypothesis testing to select the most impactful features for the predictive model.</li>
+                        <li>Streamlined the data pipeline, automated repetitive tasks, and improved data processing speed by 50%.</li>
+                    </ul>
+                </li>
+                <li><strong>Technologies Used:</strong>
+                    <ul>
+                        <li><strong>Programming Languages:</strong> Python, SQL.</li>
+                        <li><strong>Libraries and Tools:</strong> Pandas, NumPy, Scikit-learn, TensorFlow, Matplotlib, Seaborn, NLTK (for text processing).</li>
+                    </ul>
+                </li>
+                <li><strong>Impact:</strong> The enhanced model delivered a 20% increase in prediction accuracy. Workflow optimization reduced overall errors by 50%, improving operational efficiency.</li>
+                <li><strong>Applications:</strong>
+                    <ul>
+                        <li>Insights were used to design targeted marketing campaigns for specific customer segments.</li>
+                        <li>Restaurant owners adjusted menu items and pricing strategies based on data-driven insights, leading to improved revenue and customer satisfaction.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <ul>
+                <li>Developing Soft Skills and Personality - NPTEL</li>
+                <li>Machine Learning with Python - edX</li>
+                <li>Introduction to Industry 4.0 & Industrial Internet of Things - NPTEL</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <ul>
+                <li><strong>Email:</strong> sahithyakadiyamsetti@gmail.com</li>
+                <li><strong>Phone:</strong> +91-8309064817</li>
+                <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sahithya-kadiyamsetti-a827301b6" target="_blank">LinkedIn Profile</a></li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/kadiyamsettisahithya" target="_blank">GitHub Profile</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.remove('active');
+            });
+            // Show the clicked section
+            document.querySelector(`#${sectionId}`).classList.add('active');
+
+            // Update the active link in the sidebar
+            document.querySelectorAll('#sidebar nav a').forEach(link => {
+                link.classList.remove('active');
+            });
+            document.querySelector(`#sidebar nav a[href="#${sectionId}"]`).classList.add('active');
+        }
+    </script>
+</body>
+</html>
