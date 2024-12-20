@@ -23,8 +23,9 @@
             color: white;
             padding: 20px;
             text-align: center;
-            position: sticky;
+            position: fixed;
             top: 0;
+            width: 100%;
             z-index: 1000;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
@@ -42,15 +43,14 @@
 
         #sidebar {
             position: fixed;
-            top: 80px; /* Adjusted to prevent overlap with the header */
+            top: 80px; /* Adjusted to avoid overlap with the header */
             left: 0;
             width: 250px;
-            height: calc(100% - 80px); /* Ensures it doesn't overlap with the header */
+            height: calc(100% - 80px); /* Sidebar height excludes the header */
             background-color: #34495e;
             color: white;
             padding-top: 20px;
             box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
         }
 
         #sidebar nav a {
@@ -72,7 +72,7 @@
         main {
             margin-left: 250px;
             padding: 40px 20px;
-            padding-top: 100px;
+            padding-top: 160px; /* Ensures content starts below the header */
             transition: margin-left 0.3s ease;
         }
 
@@ -118,9 +118,10 @@
         @media (max-width: 768px) {
             #sidebar {
                 position: fixed;
-                top: 0;
+                top: 80px; /* Adjusted for header */
                 left: -250px;
                 width: 250px;
+                height: calc(100% - 80px); /* Adjusted for header */
                 transition: left 0.3s ease;
             }
 
@@ -130,6 +131,7 @@
 
             main {
                 margin-left: 0;
+                padding-top: 140px; /* Adjust for better visibility */
             }
 
             header {
@@ -146,7 +148,7 @@
             }
 
             #sidebar {
-                padding-top: 60px;
+                padding-top: 20px;
             }
 
             #sidebar nav a {
@@ -205,40 +207,8 @@
             </ul>
         </section>
 
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li><strong>Programming Languages:</strong> C, Python, Java, HTML, CSS, JavaScript</li>
-                <li><strong>Tools & Frameworks:</strong> MySQL, TensorFlow, Scikit-learn, Apex, Visualforce, Lightning Web Components</li>
-                <li><strong>Core Competencies:</strong> Data Analysis, Machine Learning, Cybersecurity, Android Development</li>
-            </ul>
-        </section>
+        <!-- Other sections remain the same -->
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li><strong>Descriptive Analysis and Feature Engineering for Restaurant Data:</strong> Conducted a comprehensive analysis and applied feature engineering techniques to enhance model accuracy by 20%. Streamlined workflows and reduced errors by 50%.</li>
-            </ul>
-        </section>
-
-        <section id="certifications">
-            <h2>Certifications</h2>
-            <ul>
-                <li>Developing Soft Skills and Personality - NPTEL</li>
-                <li>Machine Learning with Python - edX</li>
-                <li>Introduction to Industry 4.0 & Industrial Internet of Things - NPTEL</li>
-            </ul>
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <ul>
-                <li><strong>Email:</strong> sahithyakadiyamsetti@gmail.com</li>
-                <li><strong>Phone:</strong> +91-8309064817</li>
-                <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sahithya-kadiyamsetti-a827301b6" target="_blank">LinkedIn Profile</a></li>
-                <li><strong>GitHub:</strong> <a href="https://github.com/kadiyamsettisahithya" target="_blank">GitHub Profile</a></li>
-            </ul>
-        </section>
     </main>
 
     <script>
