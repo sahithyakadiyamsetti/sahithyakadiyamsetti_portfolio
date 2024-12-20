@@ -43,7 +43,7 @@
 
         #sidebar {
             position: fixed;
-            top: 80px; /* Adjusted to avoid overlap with the header */
+            top: 80px; /* Start below the header */
             left: 0;
             width: 250px;
             height: calc(100% - 80px); /* Sidebar height excludes the header */
@@ -72,7 +72,7 @@
         main {
             margin-left: 250px;
             padding: 40px 20px;
-            padding-top: 160px; /* Ensures content starts below the header */
+            padding-top: 120px; /* Content starts below the header */
             transition: margin-left 0.3s ease;
         }
 
@@ -118,7 +118,7 @@
         @media (max-width: 768px) {
             #sidebar {
                 position: fixed;
-                top: 80px; /* Adjusted for header */
+                top: 80px; /* Start below header */
                 left: -250px;
                 width: 250px;
                 height: calc(100% - 80px); /* Adjusted for header */
@@ -145,14 +145,6 @@
             #sidebar nav a {
                 font-size: 1rem;
                 padding: 14px;
-            }
-
-            #sidebar {
-                padding-top: 20px;
-            }
-
-            #sidebar nav a {
-                padding: 15px;
             }
         }
 
@@ -206,9 +198,6 @@
                 <li>Aiming to contribute effectively to dynamic organizations.</li>
             </ul>
         </section>
-
-        <!-- Other sections remain the same -->
-
     </main>
 
     <script>
