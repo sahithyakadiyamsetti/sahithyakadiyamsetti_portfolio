@@ -43,10 +43,10 @@
 
         #sidebar {
             position: fixed;
-            top: 80px; /* Adjusted to avoid overlap with the header */
+            top: 80px;
             left: 0;
             width: 250px;
-            height: calc(100% - 80px); /* Sidebar height excludes the header */
+            height: calc(100% - 80px);
             background-color: #34495e;
             color: white;
             padding-top: 20px;
@@ -72,7 +72,7 @@
         main {
             margin-left: 250px;
             padding: 40px 20px;
-            padding-top: 110px; /* Ensures content starts below the header */
+            padding-top: 160px;
             transition: margin-left 0.3s ease;
         }
 
@@ -109,19 +109,17 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        /* Smooth scrolling */
         html {
             scroll-behavior: smooth;
         }
 
-        /* Mobile Responsive Design */
         @media (max-width: 768px) {
             #sidebar {
                 position: fixed;
-                top: 80px; /* Adjusted for header */
+                top: 80px;
                 left: -250px;
                 width: 250px;
-                height: calc(100% - 80px); /* Adjusted for header */
+                height: calc(100% - 80px);
                 transition: left 0.3s ease;
             }
 
@@ -131,7 +129,7 @@
 
             main {
                 margin-left: 0;
-                padding-top: 140px; /* Adjust for better visibility */
+                padding-top: 140px;
             }
 
             header {
@@ -145,14 +143,6 @@
             #sidebar nav a {
                 font-size: 1rem;
                 padding: 14px;
-            }
-
-            #sidebar {
-                padding-top: 20px;
-            }
-
-            #sidebar nav a {
-                padding: 15px;
             }
         }
 
@@ -175,7 +165,7 @@
 <body>
     <header>
         <h1>Sahithya Kadiyamsetti</h1>
-        <p>Krishna - 521131, Andhra Pradesh, India | Email: sahithyakadiyamsetti@gmail.com | Contact:+91-8309064817</p>
+        <p>Krishna - 521131, Andhra Pradesh, India | Email: sahithyakadiyamsetti@gmail.com | Contact: +91-8309064817</p>
     </header>
 
     <div id="sidebar">
@@ -190,8 +180,6 @@
     </div>
 
     <main>
-        <button class="toggle-btn" onclick="toggleSidebar()">&#9776;</button>
-
         <section id="home" class="active">
             <h2>Welcome</h2>
             <p>Welcome to Sahithya Kadiyamsetti's professional portfolio. Explore my skills, projects, and certifications showcasing my expertise in the IT field.</p>
@@ -205,45 +193,45 @@
                 <li>Aiming to contribute effectively to dynamic organizations.</li>
             </ul>
         </section>
-</ul>
-        </section>
 
         <section id="skills">
             <h2>Skills</h2>
             <ul>
-                <li><strong>Programming Languages:</strong> C, Python, Java, HTML, CSS, JavaScript</li>
-                <li><strong>Tools & Frameworks:</strong> MySQL, TensorFlow, Scikit-learn, Apex, Visualforce, Lightning Web Components</li>
-                <li><strong>Core Competencies:</strong> Data Analysis, Machine Learning, Cybersecurity, Android Development</li>
+                <li>Programming Languages: Python, Java, JavaScript</li>
+                <li>Web Development: HTML, CSS, React</li>
+                <li>Machine Learning: TensorFlow, Scikit-learn</li>
+                <li>Cybersecurity: Penetration Testing, Network Security</li>
             </ul>
         </section>
 
         <section id="projects">
             <h2>Projects</h2>
             <ul>
-                <li><strong>Descriptive Analysis and Feature Engineering for Restaurant Data:</strong> Conducted a comprehensive analysis and applied feature engineering techniques to enhance model accuracy by 20%. Streamlined workflows and reduced errors by 50%.</li>
+                <li><strong>Project A:</strong> Description of project A.</li>
+                <li><strong>Project B:</strong> Description of project B.</li>
+                <li><strong>Project C:</strong> Description of project C.</li>
             </ul>
         </section>
 
         <section id="certifications">
             <h2>Certifications</h2>
             <ul>
-                <li>Developing Soft Skills and Personality - NPTEL</li>
-                <li>Machine Learning with Python - edX</li>
-                <li>Introduction to Industry 4.0 & Industrial Internet of Things - NPTEL</li>
+                <li>Certified Ethical Hacker (CEH)</li>
+                <li>Google IT Support Certificate</li>
+                <li>Machine Learning Certification</li>
             </ul>
         </section>
 
         <section id="contact">
             <h2>Contact</h2>
+            <p>If you would like to get in touch, please use the details below:</p>
             <ul>
-                <li><strong>Email:</strong> sahithyakadiyamsetti@gmail.com</li>
-                <li><strong>Phone:</strong> +91-8309064817</li>
-                <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sahithya-kadiyamsetti-a827301b6" target="_blank">LinkedIn Profile</a></li>
-                <li><strong>GitHub:</strong> <a href="https://github.com/kadiyamsettisahithya" target="_blank">GitHub Profile</a></li>
+                <li>Email: sahithyakadiyamsetti@gmail.com</li>
+                <li>Phone: +91-8309064817</li>
+                <li>LinkedIn: <a href="#">LinkedIn Profile</a></li>
+                <li>GitHub: <a href="#">GitHub Profile</a></li>
             </ul>
         </section>
-        <!-- Other sections remain the same -->
-
     </main>
 
     <script>
