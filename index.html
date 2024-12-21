@@ -109,17 +109,14 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .photo {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .photo img {
+        .profile-photo {
+            display: block;
+            margin: 20px auto;
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            object-fit: cover;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
         }
 
         html {
@@ -195,14 +192,12 @@
     <main>
         <section id="home" class="active">
             <h2>Welcome</h2>
+            <img src="sahithya-photo.jpg" alt="Sahithya Kadiyamsetti" class="profile-photo">
             <p>Welcome to Sahithya Kadiyamsetti's professional portfolio. Explore my skills, projects, and certifications showcasing my expertise in the IT field.</p>
         </section>
 
         <section id="about">
             <h2>About Me</h2>
-            <div class="photo">
-                <img src="sahithya-photo.jpg" alt="Sahithya Kadiyamsetti">
-            </div>
             <ul>
                 <li>A proactive IT graduate passionate about delivering innovative solutions.</li>
                 <li>Expertise in software development, machine learning, and cybersecurity.</li>
