@@ -243,12 +243,12 @@
             document.querySelectorAll('section').forEach(section => {
                 section.classList.remove('active');
             });
-            document.querySelector(`#${sectionId}`).classList.add('active');
+            document.querySelector(#${sectionId}).classList.add('active');
 
             document.querySelectorAll('#sidebar nav a').forEach(link => {
                 link.classList.remove('active');
             });
-            document.querySelector(`#sidebar nav a[href="#${sectionId}"]`).classList.add('active');
+            document.querySelector(#sidebar nav a[href="#${sectionId}"]).classList.add('active');
         }
 
         function toggleSidebar() {
