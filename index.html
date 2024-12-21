@@ -109,17 +109,17 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .profile-photo {
+        .photo {
             text-align: center;
             margin-bottom: 20px;
         }
 
-        .profile-photo img {
+        .photo img {
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            border: 3px solid #1abc9c;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         html {
@@ -199,10 +199,10 @@
         </section>
 
         <section id="about">
-            <div class="profile-photo">
-                <img src="sahithya%20photo.jpg" alt="Sahithya Kadiyamsetti">
-            </div>
             <h2>About Me</h2>
+            <div class="photo">
+                <img src="sahithya-photo.jpg" alt="Sahithya Kadiyamsetti">
+            </div>
             <ul>
                 <li>A proactive IT graduate passionate about delivering innovative solutions.</li>
                 <li>Expertise in software development, machine learning, and cybersecurity.</li>
