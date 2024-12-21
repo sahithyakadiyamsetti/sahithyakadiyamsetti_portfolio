@@ -25,7 +25,8 @@
             text-align: center;
             position: fixed;
             top: 0;
-            width: 80%;
+            left: 0;
+            width: 100%;
             z-index: 1000;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
@@ -43,10 +44,10 @@
 
         #sidebar {
             position: fixed;
-            top: 80px;
+            top: 100px;
             left: 0;
             width: 250px;
-            height: calc(100% - 80px);
+            height: calc(100% - 100px);
             background-color: #34495e;
             color: white;
             padding-top: 10px;
@@ -116,10 +117,10 @@
         @media (max-width: 768px) {
             #sidebar {
                 position: fixed;
-                top: 80px;
+                top: 100px;
                 left: -250px;
                 width: 250px;
-                height: calc(100% - 80px);
+                height: calc(100% - 100px);
                 transition: left 0.3s ease;
             }
 
@@ -243,12 +244,12 @@
             document.querySelectorAll('section').forEach(section => {
                 section.classList.remove('active');
             });
-            document.querySelector(#${sectionId}).classList.add('active');
+            document.querySelector(`#${sectionId}`).classList.add('active');
 
             document.querySelectorAll('#sidebar nav a').forEach(link => {
                 link.classList.remove('active');
             });
-            document.querySelector(#sidebar nav a[href="#${sectionId}"]).classList.add('active');
+            document.querySelector(`#sidebar nav a[href="#${sectionId}"]`).classList.add('active');
         }
 
         function toggleSidebar() {
