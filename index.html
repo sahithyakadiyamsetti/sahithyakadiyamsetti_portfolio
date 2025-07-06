@@ -6,19 +6,11 @@
   <title>Sahithya | Portfolio Resume</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <body class="dark-mode">
-
   <style>
     :root {
-      --bg: #f0f4f8;
+      --bg: #ffffff;
       --text: #333;
       --card: #ffffff;
-    }
-
-    body.dark-mode {
-      --bg: #0d1117;
-      --text: #e6edf3;
-      --card: #161b22;
     }
 
     body {
@@ -27,18 +19,13 @@
       color: var(--text);
       margin: 0;
       padding: 0;
-      transition: 0.3s;
     }
 
     .container {
-  width: 100%;
-  padding: 30px 5%;
-  background: var(--card);
-  border-radius: 0;
-  box-shadow: none;
-  margin: 0;
-}
-
+      width: 100%;
+      padding: 30px 5%;
+      background: var(--card);
+    }
 
     .header {
       display: flex;
@@ -90,12 +77,6 @@
       text-decoration: none;
     }
 
-    .icon-list i {
-      font-size: 20px;
-      margin-right: 10px;
-      color: #0077b6;
-    }
-
     .skills-icons i {
       font-size: 24px;
       margin-right: 12px;
@@ -107,19 +88,6 @@
       text-align: center;
       font-size: 14px;
       color: #888;
-    }
-
-    .toggle-btn {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: #0077b6;
-      color: white;
-      border: none;
-      padding: 8px 12px;
-      border-radius: 6px;
-      cursor: pointer;
-      z-index: 1000;
     }
 
     .download-btn {
@@ -154,18 +122,15 @@
 </head>
 <body>
 
-<!-- DARK MODE TOGGLE -->
-<button class="toggle-btn" onclick="toggleDarkMode()">🌓 Toggle Dark Mode</button>
-
 <!-- RESUME DOWNLOAD -->
-<a href="Sahithya_Kadiyamsetti_Resume.pdf" target="_blank">
+<a href="SahithyaKadiyamsetti_Resume.pdf" target="_blank">
   <button class="download-btn">📄 Download Resume</button>
 </a>
 
 <div class="container">
   <!-- Header -->
   <div class="header">
-<img src="sahithya_B.jpg" alt="Sahithya Kadiyamsetti">
+    <img src="sahithya_B.jpg" alt="Sahithya Kadiyamsetti">
     <div>
       <h1>KADIYAMSETTI SAHITHYA</h1>
       <p>Aspiring Backend Developer | Cloud Enthusiast | Data Analyst</p>
@@ -224,8 +189,8 @@
   <div class="section">
     <h2>📈 Projects</h2>
     <ul>
-      <li><strong>Blood Bridge:</strong> AWS-based donor-recipient matcher (98% accuracy)</li>
-      <li><strong>Deepfake Detection:</strong> 95% accuracy using MobileNetV2</li>
+      <li><strong>Blood Bridge:</strong> Designed and deployed a donor-recipient matching system using AWS EC2, RDS, and Flask.</li>
+      <li><strong>Deepfake Detection:</strong> Built MobileNetV2-based classifier to detect fake images with 95% accuracy.</li>
     </ul>
   </div>
 
@@ -233,11 +198,11 @@
   <div class="section">
     <h2>💼 Internships</h2>
     <ul>
-      <li><strong>Revature:</strong> Spring Boot backend development</li>
-      <li><strong>Google & EduSkills:</strong> Android App Development</li>
-      <li><strong>Bharat Intern:</strong> ML models (Decision Tree, KMeans)</li>
-      <li><strong>Salesforce - SmartInternz:</strong> Apex & Lightning dashboards</li>
-      <li><strong>IBM AI Internship:</strong> EDA & classifiers</li>
+      <li><strong>Revature:</strong> Created backend services using Java and Spring Boot. Practiced MVC and RESTful API design.</li>
+      <li><strong>EduSkills & Google:</strong> Built multi-screen Android apps with XML and Java under Google virtual internship program.</li>
+      <li><strong>Bharat Intern:</strong> Developed machine learning models using sklearn and pandas for prediction tasks.</li>
+      <li><strong>Salesforce - SmartInternz:</strong> Created Lightning dashboards, Apex classes and workflow automation for CRM.</li>
+      <li><strong>IBM AI Internship:</strong> Built classification models and visualizations using Jupyter, pandas and seaborn.</li>
     </ul>
   </div>
 
@@ -245,9 +210,9 @@
   <div class="section">
     <h2>🎓 Education</h2>
     <ul>
-      <li><strong>B.Tech (IT)</strong> – KH Reddy Institute, CGPA: 8.4</li>
-      <li><strong>Intermediate (MPC)</strong> – Sri Chaitanya, 96%</li>
-      <li><strong>SSC</strong> – CGPA: 10/10</li>
+      <li><strong>B.Tech (IT)</strong> – Kallam Haranadha Reddy Institute of Technology || CGPA: 8.4/10</li>
+      <li><strong>Intermediate (MPC)</strong> – Sri Chaitanya Junior College, Vijayawada || 96%</li>
+      <li><strong>SSC</strong> – Sri Chaitanya School, Challapalli || CGPA: 10/10</li>
     </ul>
   </div>
 
@@ -265,9 +230,9 @@
   <div class="section">
     <h2>🏆 Achievements</h2>
     <ul>
-      <li>Cybersecurity campaign: 500+ students (media coverage)</li>
-      <li>NSS campaigns: 500+ villagers impacted</li>
-      <li>25+ real-world projects and simulations</li>
+      <li>Organized a cybersecurity awareness drive in government schools with press coverage.</li>
+      <li>Led NSS activities for health & digital awareness in Dasaripalem village.</li>
+      <li>Completed 25+ industry-level virtual simulations & hackathons.</li>
     </ul>
   </div>
 
@@ -285,12 +250,8 @@
   </div>
 </div>
 
-<!-- Scripts -->
+<!-- JS for Animated Skill Bars -->
 <script>
-  function toggleDarkMode() {
-    document.body.classList.toggle("dark-mode");
-  }
-
   window.addEventListener("DOMContentLoaded", () => {
     const bars = document.querySelectorAll('.skill-bar');
     bars.forEach(bar => {
