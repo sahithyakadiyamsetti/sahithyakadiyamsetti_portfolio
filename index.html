@@ -1,304 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sahithya Kadiyamsetti | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        /* General Styling */
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-
-        header {
-            background: linear-gradient(90deg, #1abc9c, #16a085);
-            color: #ffffff;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-            font-weight: 600;
-        }
-
-        header p {
-            margin: 10px 0 0;
-            font-size: 1.2rem;
-        }
-
-        header a {
-            color: #ffffff;
-            font-weight: 600;
-            text-decoration: underline;
-        }
-
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        /* Sidebar Styling */
-        .sidebar {
-            width: 20%;
-            background: #34495e;
-            color: #ecf0f1;
-            padding: 20px 0;
-            position: sticky;
-            top: 0;
-            height: 100vh;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .sidebar ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .sidebar ul li {
-            text-align: left;
-            padding-left: 20px;
-            margin: 10px 0;
-            font-size: 1rem;
-            padding: 10px;
-            transition: background 0.3s;
-            cursor: pointer;
-        }
-
-        .sidebar ul li:hover, .sidebar ul li.active {
-            background: #1abc9c;
-            color: #ffffff;
-            font-weight: 600;
-        }
-
-        .sidebar ul li i {
-            margin-right: 8px;
-        }
-
-        /* Main Content Styling */
-        .main-content {
-            flex: 1;
-            padding: 20px;
-            overflow: hidden;
-        }
-
-        .content-section {
-            display: none;
-            background-color: #ffffff;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            animation: fadeIn 0.5s ease-in-out;
-        }
-
-        .content-section.active {
-            display: block;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        h2 {
-            color: #16a085;
-            font-weight: 600;
-            text-transform: uppercase;
-            margin-bottom: 15px;
-        }
-
-        ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-
-        li {
-            padding: 5px 0;
-        }
-
-        footer {
-            background-color: #34495e;
-            color: #ecf0f1;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
-            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        footer p {
-            margin: 0;
-        }
-
-        a {
-            color: #16a085;
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: #1abc9c;
-            text-decoration: underline;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .sidebar {
-                width: 100%;
-                height: auto;
-                position: static;
-            }
-
-            .sidebar ul {
-                display: flex;
-                justify-content: space-around;
-            }
-
-            .main-content {
-                padding: 10px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sahithya Kadiyamsetti – Portfolio Resume</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 40px;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      display: flex;
+      gap: 30px;
+    }
+    .photo {
+      flex: 0 0 200px;
+    }
+    .photo img {
+      width: 100%;
+      border-radius: 12px;
+    }
+    .details {
+      flex: 1;
+    }
+    h1 {
+      margin-bottom: 5px;
+      color: #2b2b2b;
+    }
+    h2 {
+      color: #2c3e50;
+      margin-top: 30px;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    a {
+      color: #0077b6;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Sahithya Kadiyamsetti's Portfolio</h1>
-        <p>Guntur, Andhra Pradesh, India - 522003 | Email: <a href="mailto:sahithyakadiyamsetti@gmail.com">sahithyakadiyamsetti@gmail.com</a> | Phone: +91-8309064817</p>
-    </header>
 
-    <div class="container">
-        <div class="sidebar">
-            <ul>
-                <li class="sidebar-link active" data-target="home"><i class="fas fa-home"></i> Home</li>
-                <li class="sidebar-link" data-target="about"><i class="fas fa-user"></i> About Me</li>
-                <li class="sidebar-link" data-target="education"><i class="fas fa-graduation-cap"></i> Education</li>
-                <li class="sidebar-link" data-target="skills"><i class="fas fa-tools"></i> Skills</li>
-                <li class="sidebar-link" data-target="projects"><i class="fas fa-project-diagram"></i> Projects</li>
-                <li class="sidebar-link" data-target="experience"><i class="fas fa-briefcase"></i> Experience</li>
-                <li class="sidebar-link" data-target="achievements"><i class="fas fa-award"></i> Achievements</li>
-                <li class="sidebar-link" data-target="contact"><i class="fas fa-envelope"></i> Contact</li>
-            </ul>
-        </div>
-
-        <div class="main-content">
-            <section id="home" class="content-section active">
-                <h2>Home</h2>
-                <p>Welcome to Sahithya Kadiyamsetti's portfolio! Explore my skills, projects, and professional journey.</p>
-            </section>
-
-            <section id="about" class="content-section">
-                <h2>About Me</h2>
-                <p>Proactive IT graduate with expertise in software development, machine learning, cybersecurity, and Android development. Passionate about delivering innovative, high-performing solutions in dynamic environments.</p>
-            </section>
-
-            <section id="education" class="content-section">
-                <h2>Education</h2>
-                <ul>
-                    <li>Bachelor of Technology | Information Technology | Kallam HaranadhaReddy Institute of Technology | Guntur | CGPA: 8.3 | 2021–2025</li>
-                    <li>Intermediate (MPC) | Sri Chaitanya Junior College | Vijayawada | Percentage: 96% | 2019–2021</li>
-                    <li>Secondary School Certificate (SSC) | Sri Chaitanya School | Challapalli | CGPA: 10 | 2018–2019</li>
-                </ul>
-            </section>
-
-            <section id="skills" class="content-section">
-                <h2>Skills</h2>
-                <ul>
-                    <li>Programming Languages: C, Python, Java, HTML, CSS, JavaScript</li>
-                    <li>Tools & Frameworks: MySQL, TensorFlow, Scikit-learn, Apex, Visualforce, Lightning Web Components</li>
-                    <li>Core Competencies: Data Analysis, Machine Learning, Cybersecurity, Android Development, Feature Engineering</li>
-                </ul>
-            </section>
-
-            <section id="projects" class="content-section">
-                <h2>Projects</h2>
-                <p><strong>Descriptive Analysis and Feature Engineering for Restaurant Data (10/2023 - 12/2023)</strong></p>
-                <ul>
-                    <li>Performed data analysis and feature engineering, improving model accuracy by 20%.</li>
-                    <li>Reduced data processing errors by 50% using streamlined preprocessing workflows.</li>
-                    <li>Designed and tested predictive models to ensure consistent performance across datasets.</li>
-                </ul>
-            </section>
-
-            <section id="experience" class="content-section">
-                <h2>Professional Experience</h2>
-                <p><strong>Salesforce Developer Virtual Internship</strong>, Smart Internz (08/2023 - 10/2023)</p>
-                <ul>
-                    <li>Customized Salesforce solutions using Apex, Visualforce, and Lightning Web Components.</li>
-                    <li>Automated workflows and improved business processes by 30%.</li>
-                </ul>
-                <p><strong>Artificial Intelligence Virtual Internship</strong>, IBM (06/2023 - 07/2023)</p>
-                <ul>
-                    <li>Enhanced expertise in AI and machine learning through hands-on projects, leveraging industry-standard tools to solve real-world problems and improve data analysis capabilities.</li>
-                </ul>
-                <p><strong>Machine Learning Virtual Internship</strong>, Bharat Intern (01/2024 - 02/2024)</p>
-                <ul>
-                    <li>Developed predictive models using Python, TensorFlow, and scikit-learn, enhancing model accuracy by 15%.</li>
-                </ul>
-                <p><strong>Android Developer Virtual Internship</strong>, EduSkills (04/2024 - 06/2024)</p>
-                <ul>
-                    <li>Built and optimized Android applications using Java and Kotlin, reducing app load times by 20%.</li>
-                </ul>
-            </section>
-
-            <section id="achievements" class="content-section">
-                <h2>Achievements</h2>
-                <ul>
-                    <li>Led a public awareness campaign on Cyber Security and Technology, educating over 500 students.</li>
-                    <li>Actively contributed to NSS initiatives, positively impacting over 500 residents in Dasaripalem village.</li>
-                </ul>
-            </section>
-
-            <section id="contact" class="content-section">
-                <h2>Contact</h2>
-                <ul>
-                    <li>Email: <a href="mailto:sahithyakadiyamsetti@gmail.com">sahithyakadiyamsetti@gmail.com</a></li>
-                    <li>Phone: +91-8309064817</li>
-                    <li>GitHub: <a href="https://github.com/sahithyakadiyamsetti" target="_blank">https://github.com/sahithyakadiyamsetti</a></li>
-                    <li>LinkedIn: <a href="https://www.linkedin.com/in/sahithya-kadiyamsetti-a827301b6" target="_blank">https://www.linkedin.com/in/sahithya-kadiyamsetti-a827301b6</a></li>
-                </ul>
-            </section>
-        </div>
+  <div class="container">
+    <div class="photo">
+      <img src="sahithya_photo.jpg" alt="Sahithya Kadiyamsetti">
     </div>
 
-    <footer>
-        <p>&copy; 2024 Sahithya Kadiyamsetti. All rights reserved.</p>
-    </footer>
+    <div class="details">
+      <h1>Kadiyamsetti Sahithya</h1>
+      <p><strong>Backend Developer | Cloud Enthusiast | Data Analyst</strong></p>
+      <p>📞 +91-8309064817 | ✉️ sahithyakadiyamsetti@gmail.com</p>
+      <p>🌐 <a href="https://www.linkedin.com/in/sahithya-kadiyamsetti-a827301b6">LinkedIn</a> |
+         💻 <a href="https://github.com/sahithyakadiyamsetti">GitHub</a></p>
+    </div>
+  </div>
 
-    <script>
-        const links = document.querySelectorAll('.sidebar-link');
-        const sections = document.querySelectorAll('.content-section');
+  <div class="section">
+    <h2>Career Summary</h2>
+    <p>Results-driven and detail-oriented IT graduate with practical experience in full-stack development, backend engineering, cloud computing, and data analytics. Proficient in Python, Java, SQL, and AWS.</p>
+  </div>
 
-        links.forEach(link => {
-            link.addEventListener('click', () => {
-                // Remove active class from all links
-                links.forEach(l => l.classList.remove('active'));
+  <div class="section">
+    <h2>Skills</h2>
+    <ul>
+      <li><strong>Languages:</strong> Python, Java, C, C++, SQL, HTML, CSS, JavaScript</li>
+      <li><strong>Frameworks & Tools:</strong> Flask, Spring Boot, Docker, React.js, GitHub</li>
+      <li><strong>Cloud & Database:</strong> AWS, Azure, MySQL, MongoDB</li>
+    </ul>
+  </div>
 
-                // Add active class to clicked link
-                link.classList.add('active');
+  <div class="section">
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>Blood Bridge:</strong> AWS-based donor-recipient matcher (98% match accuracy)</li>
+      <li><strong>Deepfake Detection:</strong> 95% accuracy using MobileNetV2 on real-world datasets</li>
+    </ul>
+  </div>
 
-                // Show the corresponding section and hide others
-                sections.forEach(section => {
-                    section.classList.remove('active');
-                    if (section.id === link.getAttribute('data-target')) {
-                        section.classList.add('active');
-                    }
-                });
-            });
-        });
-    </script>
+  <div class="section">
+    <h2>Internships</h2>
+    <ul>
+      <li><strong>Revature:</strong> Backend development with Spring Boot</li>
+      <li><strong>EduSkills & Google:</strong> Android App Development</li>
+      <li><strong>Bharat Intern:</strong> Machine Learning models</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>B.Tech IT</strong> – Kallam Haranadha Reddy Institute of Technology – 8.4 CGPA</li>
+      <li><strong>Intermediate MPC</strong> – Sri Chaitanya – 96%</li>
+      <li><strong>SSC</strong> – 10/10 CGPA</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Certifications</h2>
+    <ul>
+      <li>AWS Certified Cloud Practitioner</li>
+      <li>IBM: Python for Data Science, ML with Python</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Achievements</h2>
+    <ul>
+      <li>Led Cybersecurity Campaign (500+ students reached)</li>
+      <li>NSS Rural Impact Campaign (500+ villagers)</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Portfolio Links</h2>
+    <ul>
+      <li><a href="https://github.com/sahithyakadiyamsetti/AWS-LIFRBRIDGE_HUB">Blood Bridge Project</a></li>
+      <li><a href="https://www.linkedin.com/posts/sahithya-kadiyamsetti-a827301b6_researchpublication-deepfakedetection-mobilenetv2-activity-7320742532106092545-35aM">Deepfake Detection Post</a></li>
+    </ul>
+  </div>
+
 </body>
 </html>
